@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNA WEB SHOP - Početna stranica</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-dark-mode.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-dark-mode.css">                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <h3 data-lang-key="email-title">Email</h3>
+                            <p>info@lunawebshop.com</p>
+                            <p>podrska@lunawebshop.com</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <h3 data-lang-key="address-title">Adresa</h3>
+                            <p>Dugoselska ulica 5a</p>
+                            <p>10000 Zagreb, Hrvatska</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🌟</div>
+                            <h3 data-lang-key="social-title">Društvene mreže</h3>https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Skip links for accessibility -->
@@ -86,15 +101,15 @@
             <div class="container">
                 <div class="section-header">
                     <h2 data-lang-key="perfumes-title">Parfemi – Mirisi koji ostavljaju dojam</h2>
-                    <p>Otkrijte kolekciju parfema koja spaja eleganciju, sofisticiranost i osobnost. Bilo da tražite cvjetne, drvenaste, orijentalne ili svježe note, naši parfemi naglašavaju vaš stil i stvaraju nezaboravan dojam. Pronađite miris koji govori za vas i upotpunite svoj svakodnevni look jedinstvenom aromom.</p>
+                    <p data-lang-key="perfumes-description">Otkrijte kolekciju parfema koja spaja eleganciju, sofisticiranost i osobnost. Bilo da tražite cvjetne, drvenaste, orijentalne ili svježe note, naši parfemi naglašavaju vaš stil i stvaraju nezaboravan dojam. Pronađite miris koji govori za vas i upotpunite svoj svakodnevni look jedinstvenom aromom.</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
                         <img src="images/parfem1.jpg" alt="Elegantni parfem s cvjetnim notama" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Cvjetni Parfem</h3>
-                            <p class="product-description">Elegantna kompozicija cvjetnih nota koja odražava ženstvenu sofisticiranost. Idealan za svakodnevno nošenje.</p>
-                            <span class="product-category">Cvjetne note</span>
+                            <h3 class="product-title" data-lang-key="perfume1-title">Cvjetni Parfem</h3>
+                            <p class="product-description" data-lang-key="perfume1-description">Elegantna kompozicija cvjetnih nota koja odražava ženstvenu sofisticiranost. Idealan za svakodnevno nošenje.</p>
+                            <span class="product-category" data-lang-key="perfume1-category">Cvjetne note</span>
                             <div class="product-price">89,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "parfem1", "name": "Cvjetni Parfem", "price": 89.99, "image": "images/parfem1.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -105,9 +120,9 @@
                     <div class="product-card">
                         <img src="images/parfem2.jpg" alt="Sofisticirani parfem s drvenastim notama" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Drvenasti Parfem</h3>
-                            <p class="product-description">Sofisticirane drvenaste note koje stvaraju topao i privlačan miris. Savršen za večernje prilike.</p>
-                            <span class="product-category">Drvenaste note</span>
+                            <h3 class="product-title" data-lang-key="perfume2-title">Drvenasti Parfem</h3>
+                            <p class="product-description" data-lang-key="perfume2-description">Sofisticirane drvenaste note koje stvaraju topao i privlačan miris. Savršen za večernje prilike.</p>
+                            <span class="product-category" data-lang-key="perfume2-category">Drvenaste note</span>
                             <div class="product-price">94,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "parfem2", "name": "Drvenasti Parfem", "price": 94.99, "image": "images/parfem2.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -118,9 +133,9 @@
                     <div class="product-card">
                         <img src="images/parfem3.jpg" alt="Orijentalni parfem s egzotičnim notama" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Orijentalni Parfem</h3>
-                            <p class="product-description">Egzotične orijentalne note koje plijene svojom jedinstvenom aromom. Za one koji vole izraziti svoju osobnost.</p>
-                            <span class="product-category">Orijentalne note</span>
+                            <h3 class="product-title" data-lang-key="perfume3-title">Orijentalni Parfem</h3>
+                            <p class="product-description" data-lang-key="perfume3-description">Egzotične orijentalne note koje plijene svojom jedinstvenom aromom. Za one koji vole izraziti svoju osobnost.</p>
+                            <span class="product-category" data-lang-key="perfume3-category">Orijentalne note</span>
                             <div class="product-price">99,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "parfem3", "name": "Orijentalni Parfem", "price": 99.99, "image": "images/parfem3.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -137,15 +152,15 @@
             <div class="container">
                 <div class="section-header">
                     <h2 data-lang-key="redken-title">Redken – Profesionalna njega kose</h2>
-                    <p>Otkrijte svijet profesionalne njege kose uz Redken proizvode. Bilo da tražite šampone, regenerator, tretmane ili styling proizvode, Redken kombinira inovativnu znanost i salonsku kvalitetu kako bi vaša kosa bila zdrava, snažna i blistava. Odaberite proizvode koji odgovaraju vašem tipu kose i uživajte u dugotrajnoj njezi i savršenom izgledu svaki dan.</p>
+                    <p data-lang-key="redken-description">Otkrijte svijet profesionalne njege kose uz Redken proizvode. Bilo da tražite šampone, regenerator, tretmane ili styling proizvode, Redken kombinira inovativnu znanost i salonsku kvalitetu kako bi vaša kosa bila zdrava, snažna i blistava. Odaberite proizvode koji odgovaraju vašem tipu kose i uživajte u dugotrajnoj njezi i savršenom izgledu svaki dan.</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
                         <img src="images/redken1.jpg" alt="Redken šampon za profesionalnu njegu kose" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Redken Šampon</h3>
-                            <p class="product-description">Profesionalni šampon koji nježno čisti kosu i priprema je za styling. Obogaćen hranjivim sastojcima za zdravu kosu.</p>
-                            <span class="product-category">Profesionalna njega</span>
+                            <h3 class="product-title" data-lang-key="redken1-title">Redken Šampon</h3>
+                            <p class="product-description" data-lang-key="redken1-description">Profesionalni šampon koji nježno čisti kosu i priprema je za styling. Obogaćen hranjivim sastojcima za zdravu kosu.</p>
+                            <span class="product-category" data-lang-key="redken1-category">Profesionalna njega</span>
                             <div class="product-price">24,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "redken1", "name": "Redken Šampon", "price": 24.99, "image": "images/redken1.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -156,9 +171,9 @@
                     <div class="product-card">
                         <img src="images/redken2.jpg" alt="Redken regenerator za intenzivnu hidrataciju" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Redken Regenerator</h3>
-                            <p class="product-description">Intenzivni regenerator koji dubinski hidrira i obnavlja oštećenu kosu. Rezultat je mekana i blistava kosa.</p>
-                            <span class="product-category">Intenzivna hidratacija</span>
+                            <h3 class="product-title" data-lang-key="redken2-title">Redken Regenerator</h3>
+                            <p class="product-description" data-lang-key="redken2-description">Intenzivni regenerator koji dubinski hidrira i obnavlja oštećenu kosu. Rezultat je mekana i blistava kosa.</p>
+                            <span class="product-category" data-lang-key="redken2-category">Intenzivna hidratacija</span>
                             <div class="product-price">29,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "redken2", "name": "Redken Regenerator", "price": 29.99, "image": "images/redken2.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -169,9 +184,9 @@
                     <div class="product-card">
                         <img src="images/redken3.jpg" alt="Redken tretman za obnavljanje kose" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Redken Tretman</h3>
-                            <p class="product-description">Napredni tretman koji obnavlja strukturu kose i pruža dugotrajan sjaj. Idealan za oštećenu kosu.</p>
-                            <span class="product-category">Obnavljanje strukture</span>
+                            <h3 class="product-title" data-lang-key="redken3-title">Redken Tretman</h3>
+                            <p class="product-description" data-lang-key="redken3-description">Napredni tretman koji obnavlja strukturu kose i pruža dugotrajan sjaj. Idealan za oštećenu kosu.</p>
+                            <span class="product-category" data-lang-key="redken3-category">Obnavljanje strukture</span>
                             <div class="product-price">39,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "redken3", "name": "Redken Tretman", "price": 39.99, "image": "images/redken3.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -188,15 +203,15 @@
             <div class="container">
                 <div class="section-header">
                     <h2 data-lang-key="rhode-title">Rhode by Hailey Bieber – Glamur u svakom potezu</h2>
-                    <p>Otkrijte Rhode, beauty brend Hailey Bieber, i uživajte u sofisticiranim ruževima, highlighterima i drugim makeup proizvodima koji ističu vašu prirodnu ljepotu. Svaki proizvod pažljivo je formuliran kako bi bio dugotrajan, intenzivan i jednostavan za korištenje – za look koji plijeni pažnju svaki dan.</p>
+                    <p data-lang-key="rhode-description">Otkrijte Rhode, beauty brend Hailey Bieber, i uživajte u sofisticiranim ruževima, highlighterima i drugim makeup proizvodima koji ističu vašu prirodnu ljepotu. Svaki proizvod pažljivo je formuliran kako bi bio dugotrajan, intenzivan i jednostavan za korištenje – za look koji plijeni pažnju svaki dan.</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
                         <img src="images/rhode1.jpg" alt="Rhode ruž by Hailey Bieber" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Rhode Ruž</h3>
-                            <p class="product-description">Luksuzni ruž Hailey Bieber koji pruža intenzivnu boju i dugotrajnost. Formula obogaćena vitaminima.</p>
-                            <span class="product-category">by Hailey Bieber</span>
+                            <h3 class="product-title" data-lang-key="rhode1-title">Rhode Ruž</h3>
+                            <p class="product-description" data-lang-key="rhode1-description">Luksuzni ruž Hailey Bieber koji pruža intenzivnu boju i dugotrajnost. Formula obogaćena vitaminima.</p>
+                            <span class="product-category" data-lang-key="rhode1-category">by Hailey Bieber</span>
                             <div class="product-price">22,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "rhode1", "name": "Rhode Ruž", "price": 22.99, "image": "images/rhode1.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -207,9 +222,9 @@
                     <div class="product-card">
                         <img src="images/rhode2.jpg" alt="Rhode highlighter za prirodni sjaj" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Rhode Highlighter</h3>
-                            <p class="product-description">Highlighter koji daje prirodan sjaj i ističe najbolje karakteristike lica. Lako se aplicira i dugo traje.</p>
-                            <span class="product-category">Prirodni sjaj</span>
+                            <h3 class="product-title" data-lang-key="rhode2-title">Rhode Highlighter</h3>
+                            <p class="product-description" data-lang-key="rhode2-description">Highlighter koji daje prirodan sjaj i ističe najbolje karakteristike lica. Lako se aplicira i dugo traje.</p>
+                            <span class="product-category" data-lang-key="rhode2-category">Prirodni sjaj</span>
                             <div class="product-price">18,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "rhode2", "name": "Rhode Highlighter", "price": 18.99, "image": "images/rhode2.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -220,9 +235,9 @@
                     <div class="product-card">
                         <img src="images/rhode3.jpg" alt="Rhode makeup kolekcija" class="product-image">
                         <div class="product-info">
-                            <h3 class="product-title">Rhode Kolekcija</h3>
-                            <p class="product-description">Kompletna makeup kolekcija Rhode brenda. Sve što trebate za savršen glamurozni look u jednom setu.</p>
-                            <span class="product-category">Kompletna kolekcija</span>
+                            <h3 class="product-title" data-lang-key="rhode3-title">Rhode Kolekcija</h3>
+                            <p class="product-description" data-lang-key="rhode3-description">Kompletna makeup kolekcija Rhode brenda. Sve što trebate za savršen glamurozni look u jednom setu.</p>
+                            <span class="product-category" data-lang-key="rhode3-category">Kompletna kolekcija</span>
                             <div class="product-price">69,99 €</div>
                             <button class="add-to-cart-btn" data-product='{"id": "rhode3", "name": "Rhode Kolekcija", "price": 69.99, "image": "images/rhode3.jpg"}'>
                                 <span data-lang-key="add-to-cart">Dodaj u košaricu</span>
@@ -247,11 +262,11 @@
                             <div class="blog-placeholder">📝</div>
                         </div>
                         <div class="blog-content">
-                            <span class="blog-category" data-lang-key="skincare">Njega kože</span>
-                            <h3 class="blog-title">10 koraka za savršenu jutarnju rutinu njege</h3>
-                            <p class="blog-excerpt">Otkrijte kako kreirati idealnu jutarnju rutinu koja će vašoj koži dati sjaj i svježinu tijekom cijelog dana...</p>
+                            <span class="blog-category" data-lang-key="blog1-category">Njega kože</span>
+                            <h3 class="blog-title" data-lang-key="blog1-title">10 koraka za savršenu jutarnju rutinu njege</h3>
+                            <p class="blog-excerpt" data-lang-key="blog1-excerpt">Otkrijte kako kreirati idealnu jutarnju rutinu koja će vašoj koži dati sjaj i svježinu tijekom cijelog dana...</p>
                             <div class="blog-meta">
-                                <span class="blog-date">25. rujna 2025</span>
+                                <span class="blog-date" data-lang-key="blog1-date">25. rujna 2025</span>
                                 <a href="#" class="read-more" data-lang-key="read-more">Čitaj više →</a>
                             </div>
                         </div>
@@ -262,11 +277,11 @@
                             <div class="blog-placeholder">💄</div>
                         </div>
                         <div class="blog-content">
-                            <span class="blog-category" data-lang-key="makeup">Makeup</span>
-                            <h3 class="blog-title">Kako odabrati savršenu nijansu ruža?</h3>
-                            <p class="blog-excerpt">Stručni vodič za odabir ruža koji najbolje pristaje vašem tonu kože i stilu. Savjeti beauty stručnjaka...</p>
+                            <span class="blog-category" data-lang-key="blog2-category">Makeup</span>
+                            <h3 class="blog-title" data-lang-key="blog2-title">Kako odabrati savršenu nijansu ruža?</h3>
+                            <p class="blog-excerpt" data-lang-key="blog2-excerpt">Stručni vodič za odabir ruža koji najbolje pristaje vašem tonu kože i stilu. Savjeti beauty stručnjaka...</p>
                             <div class="blog-meta">
-                                <span class="blog-date">22. rujna 2025</span>
+                                <span class="blog-date" data-lang-key="blog2-date">22. rujna 2025</span>
                                 <a href="#" class="read-more" data-lang-key="read-more">Čitaj više →</a>
                             </div>
                         </div>
@@ -277,11 +292,11 @@
                             <div class="blog-placeholder">🌟</div>
                         </div>
                         <div class="blog-content">
-                            <span class="blog-category" data-lang-key="haircare">Njega kose</span>
-                            <h3 class="blog-title">Redken proizvodi - vodič za zdravu kosu</h3>
-                            <p class="blog-excerpt">Sve što trebate znati o profesionalnoj njezi kose s Redken proizvodima. Kako postići salonski rezultat kod kuće...</p>
+                            <span class="blog-category" data-lang-key="blog3-category">Njega kose</span>
+                            <h3 class="blog-title" data-lang-key="blog3-title">Redken proizvodi - vodič za zdravu kosu</h3>
+                            <p class="blog-excerpt" data-lang-key="blog3-excerpt">Sve što trebate znati o profesionalnoj njezi kose s Redken proizvodima. Kako postići salonski rezultat kod kuće...</p>
                             <div class="blog-meta">
-                                <span class="blog-date">20. rujna 2025</span>
+                                <span class="blog-date" data-lang-key="blog3-date">20. rujna 2025</span>
                                 <a href="#" class="read-more" data-lang-key="read-more">Čitaj više →</a>
                             </div>
                         </div>
@@ -294,8 +309,8 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Kontaktiraj nas</h2>
-                    <p>Imate pitanja o našim proizvodima? Želite savjet o njezi ili makeup-u? Tu smo za vas!</p>
+                    <h2 data-lang-key="contact-title">Kontaktiraj nas</h2>
+                    <p data-lang-key="contact-subtitle">Imate pitanja o našim proizvodima? Želite savjet o njezi ili makeup-u? Tu smo za vas!</p>
                 </div>
                 
                 <div class="contact-container">
