@@ -1,0 +1,31 @@
+{
+  "name": "luna-web-shop",
+  "version": "1.0.0",
+  "description": "LUNA WEB SHOP - Kozmetička trgovina s parfemima, Redken proizvodima i Rhode kolekcijom",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 3000 -o",
+    "dev": "http-server -p 3000 -o",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "cosmetics",
+    "perfumes",
+    "beauty",
+    "redken",
+    "rhode",
+    "makeup",
+    "skincare"
+  ],
+  "author": "LUNA WEB SHOP",
+  "license": "MIT",
+  "homepage": "https://luna-web-shop.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/luna-web-shop.git"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
