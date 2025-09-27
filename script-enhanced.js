@@ -32,6 +32,12 @@ class LunaWebShop {
         document.documentElement.setAttribute('data-theme', this.currentTheme);
         localStorage.setItem('lunaTheme', this.currentTheme);
         this.updateThemeButton();
+        console.log(`Theme switched to: ${this.currentTheme}`);
+        
+        // Force a repaint to ensure changes are visible
+        document.body.style.display = 'none';
+        document.body.offsetHeight; // trigger reflow
+        document.body.style.display = '';
     }
 
     updateThemeButton() {
@@ -68,7 +74,12 @@ class LunaWebShop {
                 'skincare': 'Njega kože',
                 'makeup': 'Makeup',
                 'haircare': 'Njega kose',
-                'read-more': 'Čitaj više →'
+                'read-more': 'Čitaj više →',
+                // Dodajem nova prevođenja za sekcije
+                'hero-subtitle': 'Kozmetika koja ističe tvoju prirodnu ljepotu – kvalitetno, pouzdano i s ljubavlju odabrano.',
+                'perfumes-title': 'Parfemi – Mirisi koji ostavljaju dojam',
+                'redken-title': 'Redken – Profesionalna njega kose',
+                'rhode-title': 'Rhode by Hailey Bieber – Glamur u svakom potezu'
             },
             en: {
                 'home': 'Home',
@@ -85,7 +96,12 @@ class LunaWebShop {
                 'skincare': 'Skincare',
                 'makeup': 'Makeup',
                 'haircare': 'Hair Care',
-                'read-more': 'Read more →'
+                'read-more': 'Read more →',
+                // Dodajem nova prevođenja za sekcije
+                'hero-subtitle': 'Cosmetics that highlight your natural beauty – quality, reliable and lovingly selected.',
+                'perfumes-title': 'Perfumes – Scents that make an impression',
+                'redken-title': 'Redken – Professional hair care',
+                'rhode-title': 'Rhode by Hailey Bieber – Glamour in every move'
             }
         };
     }

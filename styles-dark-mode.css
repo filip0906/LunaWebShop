@@ -1,0 +1,185 @@
+/* Dark Mode Enhancement CSS - Load after main styles */
+
+/* Enhanced CSS Variables with Dark Mode Support */
+:root {
+    /* Light Theme Colors */
+    --primary-color: #d946ef;
+    --secondary-color: #9333ea;
+    --accent-color: #fbbf24;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --bg-color: #ffffff;
+    --bg-secondary: #f9fafb;
+    --border-color: #e5e7eb;
+    --header-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #5d6d7e 100%);
+    --hero-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 25%, #f39c12 50%, #e74c3c 75%, #9b59b6 100%);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --gradient-accent: linear-gradient(135deg, var(--accent-color), #f59e0b);
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+    --text-color: #f9fafb;
+    --text-light: #d1d5db;
+    --bg-color: #111827;
+    --bg-secondary: #1f2937;
+    --border-color: #374151;
+    --header-bg: linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%);
+    --hero-bg: linear-gradient(135deg, #111827 0%, #1f2937 25%, #7c2d12 50%, #dc2626 75%, #7c3aed 100%);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* Override main styles with CSS variables */
+body {
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+    transition: all 0.3s ease;
+}
+
+.header {
+    background: var(--header-bg) !important;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    background: var(--hero-bg) !important;
+    background-size: 400% 400% !important;
+    transition: all 0.3s ease;
+}
+
+/* Product sections */
+.product-section {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+}
+
+.product-section.alt-bg {
+    background: var(--bg-secondary) !important;
+}
+
+.product-card {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: var(--shadow) !important;
+    transition: all 0.3s ease;
+}
+
+.product-title {
+    color: var(--text-color) !important;
+}
+
+.product-description {
+    color: var(--text-light) !important;
+}
+
+/* Contact section */
+.contact-section {
+    background: var(--bg-secondary) !important;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+}
+
+.contact-item {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+}
+
+.contact-form {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    color: var(--text-color) !important;
+}
+
+/* Blog section */
+.blog-section {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+}
+
+.blog-card {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: var(--shadow) !important;
+    transition: all 0.3s ease;
+}
+
+.blog-title {
+    color: var(--text-color) !important;
+}
+
+.blog-excerpt {
+    color: var(--text-light) !important;
+}
+
+.blog-date {
+    color: var(--text-light) !important;
+}
+
+/* Section headers */
+.section-header h2 {
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+}
+
+.section-header p {
+    color: var(--text-light) !important;
+    transition: all 0.3s ease;
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-secondary) !important;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+}
+
+/* Navigation menu */
+.nav-brand h1 {
+    color: white !important;
+}
+
+.nav-menu a {
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .hero {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .product-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .blog-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Smooth transition for theme changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
