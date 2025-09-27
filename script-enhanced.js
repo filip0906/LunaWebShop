@@ -141,6 +141,7 @@ class LunaWebShop {
                 'form-newsletter': 'Želim primati newsletter s novostima i posebnim ponudama',
                 'form-submit': 'Pošalji poruku',
                 'form-placeholder': 'Opišite što vas zanima ili kako vam možemo pomoći...',
+                'form-placeholder': 'Opišite što vas zanima ili kako vam možemo pomoći...',
                 // Select opcije
                 'subject-select': 'Odaberite predmet...',
                 'subject-perfumes': 'Pitanje o parfemima',
@@ -236,6 +237,7 @@ class LunaWebShop {
                 'form-newsletter': 'I want to receive newsletter with news and special offers',
                 'form-submit': 'Send message',
                 'form-placeholder': 'Describe what interests you or how we can help you...',
+                'form-placeholder': 'Describe what interests you or how we can help you...',
                 // Select opcije
                 'subject-select': 'Choose subject...',
                 'subject-perfumes': 'Question about perfumes',
@@ -274,7 +276,14 @@ class LunaWebShop {
                 const key = element.getAttribute('data-lang-key');
                 const translation = this.translations[this.currentLanguage][key];
                 if (translation) {
-                    element.textContent = translation;
+                    // Handle different element types
+                    if (element.tagName === 'INPUT' && element.type === 'text') {
+                        element.placeholder = translation;
+                    } else if (element.tagName === 'TEXTAREA') {
+                        element.placeholder = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
                 }
             });
         }

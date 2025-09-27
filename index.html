@@ -343,48 +343,48 @@
                     
                     <!-- Contact Form -->
                     <div class="contact-form">
-                        <h3>Pošaljite nam poruku</h3>
+                        <h3 data-lang-key="form-title">Pošaljite nam poruku</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <label for="name">Ime i prezime *</label>
+                                <label for="name" data-lang-key="form-name">Ime i prezime *</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email adresa *</label>
+                                <label for="email" data-lang-key="form-email">Email adresa *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="phone">Telefon</label>
+                                <label for="phone" data-lang-key="form-phone">Telefon</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Predmet *</label>
+                                <label for="subject" data-lang-key="form-subject">Predmet *</label>
                                 <select id="subject" name="subject" required>
-                                    <option value="">Odaberite predmet...</option>
-                                    <option value="parfemi">Pitanje o parfemima</option>
-                                    <option value="redken">Pitanje o Redken proizvodima</option>
-                                    <option value="rhode">Pitanje o Rhode kolekciji</option>
-                                    <option value="dostava">Dostava i plaćanje</option>
-                                    <option value="reklamacija">Reklamacija</option>
-                                    <option value="ostalo">Ostalo</option>
+                                    <option value="" data-lang-key="subject-select">Odaberite predmet...</option>
+                                    <option value="parfemi" data-lang-key="subject-perfumes">Pitanje o parfemima</option>
+                                    <option value="redken" data-lang-key="subject-redken">Pitanje o Redken proizvodima</option>
+                                    <option value="rhode" data-lang-key="subject-rhode">Pitanje o Rhode kolekciji</option>
+                                    <option value="dostava" data-lang-key="subject-delivery">Dostava i plaćanje</option>
+                                    <option value="reklamacija" data-lang-key="subject-complaint">Reklamacija</option>
+                                    <option value="ostalo" data-lang-key="subject-other">Ostalo</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Poruka *</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Opišite što vas zanima ili kako vam možemo pomoći..."></textarea>
+                                <label for="message" data-lang-key="form-message">Poruka *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Opišite što vas zanima ili kako vam možemo pomoći..." data-lang-key="form-placeholder"></textarea>
                             </div>
                             
                             <div class="form-group checkbox-group">
                                 <input type="checkbox" id="newsletter" name="newsletter">
-                                <label for="newsletter">Želim primati newsletter s novostima i posebnim ponudama</label>
+                                <label for="newsletter" data-lang-key="form-newsletter">Želim primati newsletter s novostima i posebnim ponudama</label>
                             </div>
                             
                             <button type="submit" class="submit-btn">
-                                <span>Pošalji poruku</span>
+                                <span data-lang-key="form-submit">Pošalji poruku</span>
                                 <div class="btn-icon">✨</div>
                             </button>
                         </form>
@@ -398,11 +398,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 LUNA WEB SHOP. Sva prava pridržana.</p>
+                <p>&copy; 2025 LUNA WEB SHOP. <span data-lang-key="footer-rights">Sva prava pridržana.</span></p>
                 <div class="footer-links">
-                    <a href="#privacy">Privatnost</a>
-                    <a href="#terms">Uvjeti korištenja</a>
-                    <a href="#contact">Kontakt</a>
+                    <a href="#privacy" data-lang-key="footer-privacy">Privatnost</a>
+                    <a href="#terms" data-lang-key="footer-terms">Uvjeti korištenja</a>
+                    <a href="#contact" data-lang-key="contact">Kontakt</a>
                 </div>
             </div>
         </div>
