@@ -2,10 +2,12 @@
 
 class LunaWebShop {
     constructor() {
+        console.log('LunaWebShop constructor called');
         this.cart = JSON.parse(localStorage.getItem('lunaCart') || '[]');
         this.currentLanguage = localStorage.getItem('lunaLanguage') || 'hr';
         this.currentTheme = localStorage.getItem('lunaTheme') || 'light';
         
+        console.log(`Initial state - Language: ${this.currentLanguage}, Theme: ${this.currentTheme}`);
         this.init();
     }
 
@@ -34,8 +36,13 @@ class LunaWebShop {
 
     updateThemeButton() {
         const themeButton = document.getElementById('themeToggle');
-        const icon = themeButton.querySelector('.theme-icon');
-        icon.textContent = this.currentTheme === 'light' ? '🌙' : '☀️';
+        if (themeButton) {
+            const icon = themeButton.querySelector('.theme-icon');
+            if (icon) {
+                icon.textContent = this.currentTheme === 'light' ? '🌙' : '☀️';
+                console.log(`Theme updated to: ${this.currentTheme}`);
+            }
+        }
     }
 
     // Language Management
@@ -91,20 +98,24 @@ class LunaWebShop {
 
     updateLanguageDisplay() {
         const langButton = document.getElementById('langToggle');
-        const flag = langButton.querySelector('.flag');
-        const text = langButton.querySelector('.lang-text');
-        
-        flag.textContent = this.currentLanguage === 'hr' ? '🇭🇷' : '🇬🇧';
-        text.textContent = this.currentLanguage.toUpperCase();
+        if (langButton) {
+            const flag = langButton.querySelector('.flag');
+            const text = langButton.querySelector('.lang-text');
+            
+            if (flag) flag.textContent = this.currentLanguage === 'hr' ? '🇭🇷' : '🇬🇧';
+            if (text) text.textContent = this.currentLanguage.toUpperCase();
 
-        // Update all elements with data-lang-key
-        document.querySelectorAll('[data-lang-key]').forEach(element => {
-            const key = element.getAttribute('data-lang-key');
-            const translation = this.translations[this.currentLanguage][key];
-            if (translation) {
-                element.textContent = translation;
-            }
-        });
+            console.log(`Language updated to: ${this.currentLanguage}`);
+
+            // Update all elements with data-lang-key
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                const translation = this.translations[this.currentLanguage][key];
+                if (translation) {
+                    element.textContent = translation;
+                }
+            });
+        }
     }
 
     // Shopping Cart Management
@@ -317,44 +328,78 @@ class LunaWebShop {
 
     // Event Binding
     bindEvents() {
-        // Theme toggle
-        document.getElementById('themeToggle').addEventListener('click', () => this.toggleTheme());
-        
-        // Language toggle
-        document.getElementById('langToggle').addEventListener('click', () => this.toggleLanguage());
-        
-        // Cart toggle
-        document.getElementById('cartToggle').addEventListener('click', () => this.toggleCart());
-        document.getElementById('cartClose').addEventListener('click', () => this.toggleCart());
-        document.getElementById('cartOverlay').addEventListener('click', () => this.toggleCart());
-        
-        // Add to cart buttons
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const productData = JSON.parse(e.currentTarget.getAttribute('data-product'));
-                this.addToCart(productData);
-            });
-        });
+        // Wait for elements to be available
+        const bindWhenReady = () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const langToggle = document.getElementById('langToggle');
+            const cartToggle = document.getElementById('cartToggle');
+            const cartClose = document.getElementById('cartClose');
+            const cartOverlay = document.getElementById('cartOverlay');
 
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            if (!themeToggle || !langToggle || !cartToggle) {
+                console.log('Waiting for elements to load...');
+                setTimeout(bindWhenReady, 100);
+                return;
+            }
+
+            // Theme toggle
+            themeToggle.addEventListener('click', () => {
+                console.log('Theme toggle clicked');
+                this.toggleTheme();
             });
-        });
+            
+            // Language toggle
+            langToggle.addEventListener('click', () => {
+                console.log('Language toggle clicked');
+                this.toggleLanguage();
+            });
+            
+            // Cart toggle
+            cartToggle.addEventListener('click', () => {
+                console.log('Cart toggle clicked');
+                this.toggleCart();
+            });
+
+            if (cartClose) {
+                cartClose.addEventListener('click', () => this.toggleCart());
+            }
+            
+            if (cartOverlay) {
+                cartOverlay.addEventListener('click', () => this.toggleCart());
+            }
+            
+            // Add to cart buttons
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productData = JSON.parse(e.currentTarget.getAttribute('data-product'));
+                    this.addToCart(productData);
+                });
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            console.log('All events bound successfully!');
+        };
+
+        bindWhenReady();
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 const cartModal = document.getElementById('cartModal');
-                if (cartModal.classList.contains('active')) {
+                if (cartModal && cartModal.classList.contains('active')) {
                     this.toggleCart();
                 }
             }
@@ -364,8 +409,20 @@ class LunaWebShop {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing Luna Web Shop...');
     window.lunaShop = new LunaWebShop();
+    console.log('Luna Web Shop initialized!');
 });
+
+// Fallback initialization in case DOMContentLoaded already fired
+if (document.readyState === 'loading') {
+    // DOM is still loading
+    console.log('Waiting for DOM to load...');
+} else {
+    // DOM already loaded
+    console.log('DOM already loaded, initializing immediately...');
+    window.lunaShop = new LunaWebShop();
+}
 
 // Add CSS animations for scroll effects
 if (!document.querySelector('#scroll-animation-style')) {
@@ -389,3 +446,33 @@ if (!document.querySelector('#scroll-animation-style')) {
     `;
     document.head.appendChild(style);
 }
+
+// Test function for immediate debugging
+function testButtons() {
+    console.log('Testing buttons...');
+    const themeBtn = document.getElementById('themeToggle');
+    const langBtn = document.getElementById('langToggle');
+    const cartBtn = document.getElementById('cartToggle');
+    
+    console.log('Theme button:', themeBtn);
+    console.log('Language button:', langBtn);
+    console.log('Cart button:', cartBtn);
+    
+    if (themeBtn) {
+        themeBtn.style.border = '2px solid red';
+        console.log('Theme button found and highlighted');
+    }
+    
+    if (langBtn) {
+        langBtn.style.border = '2px solid green';
+        console.log('Language button found and highlighted');
+    }
+    
+    if (cartBtn) {
+        cartBtn.style.border = '2px solid blue';
+        console.log('Cart button found and highlighted');
+    }
+}
+
+// Run test immediately
+setTimeout(testButtons, 1000);
