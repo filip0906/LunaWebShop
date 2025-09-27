@@ -23,7 +23,7 @@
   "homepage": "https://luna-web-shop.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/luna-web-shop.git"
+    "url": "https://github.com/filip0906/LunaWebShop.git"
   },
   "devDependencies": {
     "http-server": "^14.1.1"
