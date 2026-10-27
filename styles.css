@@ -414,7 +414,37 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 @media (max-width: 600px) {
     .container { width: calc(100% - 32px); }
     .form-row { grid-template-columns: 1fr; gap: 0; }
-    .product-grid, .blog-grid { grid-template-columns: 1fr; }
+    .product-section, .blog-section, .contact-section { padding: 56px 0; }
+    .section-header { margin-bottom: 28px; }
+    .section-header h2 { font-size: 1.9rem; margin: 8px 0 12px; }
+    .section-header h2::after { margin-top: 14px; }
+    .section-header p { font-size: 0.9rem; line-height: 1.6; }
+
+    /* swipeable carousels instead of endless stacked cards */
+    .product-grid, .blog-grid {
+        display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+        margin-inline: -16px; padding: 4px 16px 22px; scroll-padding-inline: 16px; scrollbar-width: none;
+    }
+    .product-grid::-webkit-scrollbar, .blog-grid::-webkit-scrollbar { display: none; }
+    .product-card, .blog-card { flex: 0 0 78%; max-width: 330px; scroll-snap-align: start; }
+    .js .product-grid .reveal, .js .blog-grid .reveal { opacity: 1; transform: none; }
+    .product-media { aspect-ratio: 1 / 1; }
+    .product-info { padding: 18px 18px 20px; }
+    .product-title { font-size: 1.4rem; }
+    .product-description { font-size: 0.85rem; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 0 1 auto; min-height: 4.4em; }
+    .product-footer { padding-top: 14px; margin-top: auto; }
+    .product-price { font-size: 1.45rem; }
+    .add-to-cart-btn { padding: 10px 14px; font-size: 0.7rem; }
+    .blog-image { height: 96px; }
+    .blog-image svg { width: 38px; height: 38px; }
+    .blog-content { padding: 18px; }
+    .blog-title { font-size: 1.25rem; }
+    .contact-form h3 { font-size: 1.6rem; }
+    .contact-item { padding: 18px; }
+    .contact-item:hover { transform: none; }
+    .marquee-track { font-size: 1.05rem; }
+    .to-top { width: 42px; height: 42px; right: 14px; bottom: 14px; }
+    .footer { padding: 40px 0 90px; }
     .hero { padding-bottom: 110px; }
     .hero-cta .btn { width: 100%; max-width: 300px; }
     .toast-region { right: 12px; left: 12px; bottom: 82px; }
